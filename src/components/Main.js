@@ -7,7 +7,7 @@ class AppComponent extends React.Component {
     this.state = { text: 'Not clicked!' };
   }
 
-  onClick() {
+  onButtonClick() {
     this.setState({ text: 'Clicked!' });
   }
 
@@ -16,7 +16,7 @@ class AppComponent extends React.Component {
       <div className="main">
         <Text />
         <p>{this.state.text}</p>
-        <button onClick={this.onClick.bind(this)}>Click</button>
+        <button onClick={this.onButtonClick.bind(this)}>Click</button>
       </div>
     );
   }
