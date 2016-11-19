@@ -14,7 +14,7 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div className="main">
-        <Text />
+        <Text staticText="Text from child component" clickText={this.state.text} />
         <p>{this.state.text}</p>
         <button onClick={this.onButtonClick.bind(this)}>Click</button>
       </div>

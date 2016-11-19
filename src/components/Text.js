@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 class TextComponent extends React.Component {
+  static propTypes = {
+    clickText: PropTypes.string.isRequired,
+    staticText: PropTypes.string.isRequired
+  };
+
   render() {
     return (
-      <p className="text">Some text</p>
+      <div>
+        <p className="text">{this.props.staticText}</p>
+        <p className="text">{`Text from parent: ${this.props.clickText}`}</p>
+      </div>
     );
   }
 }
